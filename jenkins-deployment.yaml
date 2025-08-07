@@ -14,9 +14,10 @@ spec:
       labels:
         app: jenkins
     spec:
+      serviceAccountName: jenkins-sa
       containers:
         - name: jenkins
-          image: jenkins/jenkins
+          image: orvencasido/jenkins0kubectl:latest
           ports:
             - containerPort: 8080
           volumeMounts:
